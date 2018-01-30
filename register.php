@@ -11,7 +11,7 @@ if(isset($_POST['register'])) {
     $password = $mysqli->escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
     $hash = $mysqli->escape_string( md5( rand(0,1000) ) );
 
-    $result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error());
+    $result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
 
     if ( $result->num_rows > 0 ) {
 
@@ -22,7 +22,7 @@ if(isset($_POST['register'])) {
 
     else {
 
-        $sql = "INSERT INTO users (`user_name`,`email`,`password`,`hash`) VALUES ('".$user_name."','".$email."','".$password."','".$hash."')";
+        $sql = "INSERT INTO users (`username`,`email`,`password`,`hash`) VALUES ('".$user_name."','".$email."','".$password."','".$hash."')";
 
         if ($mysqli->query($sql)) {
 //            $_SESSION['message'] = "mail has not been registered!";

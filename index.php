@@ -14,23 +14,6 @@ session_start();
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<!--<!--PHP code below-->-->
-<?php
-//if ($_SERVER['REQUEST_METHOD'] == 'POST')
-//{
-//    if (isset($_POST['login'])) { //user logging in
-//
-//        require 'login.php';
-//
-//    }
-//
-//    elseif (isset($_POST['register'])) { //user registering
-//
-//        require 'register.php';
-//
-//    }
-//}
-//?>
 <body>
 <div class="wrapper">
     <div class="navigation">
